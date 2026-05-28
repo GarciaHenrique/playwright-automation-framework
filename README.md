@@ -58,13 +58,11 @@ O framework segue uma estrutura baseada em camadas:
 # 🐳 Execução via Docker
 
 ## 🔨 Build da imagem
-
 ```bash
 docker build -t qa-framework .
 ```
 
 ## ▶ Execução dos testes
-
 ```bash
 docker run qa-framework
 ```
@@ -73,13 +71,12 @@ docker run qa-framework
 
 # 📊 Relatórios (Allure)
 
-Após a execução dos testes:
+### Após a execução dos testes:
 ```bash
 allure serve allure-results
 ```
 
 ### O relatório inclui:
-
 - Status dos testes
 - Logs de execução
 - Evidências (screenshots quando aplicável)
@@ -87,7 +84,6 @@ allure serve allure-results
 ---
 
 # ⚙️ CI/CD
-
 Este projeto possui integração com GitHub Actions para execução automática dos testes em cada push.
 
 ---
