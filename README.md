@@ -6,7 +6,7 @@ O projeto simula uma arquitetura de automação utilizada em ambientes reais de 
 
 ---
 
-## 🎯 Objetivo
+# 🎯 Objetivo
 
 Este framework foi desenvolvido para demonstrar:
 
@@ -19,46 +19,51 @@ Este framework foi desenvolvido para demonstrar:
 
 ---
 
-## 🏗 Arquitetura do Framework
+# 🏗 Arquitetura do Framework
 
 O framework segue uma estrutura baseada em camadas:
 
+## 📦 Camadas do sistema
+
 - **Tests** → Casos de teste
-- **Pages** → Page Object Model (UI abstração)
-- **Core** → BaseTest e configuração do ciclo de execução
-- **Utils** → Helpers como screenshots e utilitários
+- **Pages** → Page Object Model (abstração da UI)
+- **Core** → BaseTest e controle do ciclo de execução
+- **Utils** → Helpers (screenshots, logs e utilitários)
 
-### Fluxo de execução:
+---
 
-1. O teste é iniciado dentro do NUnit
-2. BaseTest inicializa o browser com Playwright
-3. Pages encapsulam ações da interface
-4. Utils capturam evidências (screenshots/logs)
-5. Allure registra os resultados da execução
+## 🔁 Fluxo de execução
+
+1. O teste é iniciado pelo NUnit
+2. O BaseTest inicializa o browser com Playwright
+3. As Pages encapsulam as ações da interface
+4. Os Utils capturam evidências (screenshots e logs)
+5. O Allure registra os resultados da execução
 6. O browser é encerrado ao final do teste
 
 ---
 
-## 🚀 Funcionalidades
+# 🚀 Funcionalidades
 
-- Testes automatizados de UI com Playwright
-- Testes de API
+- Automação de testes UI com Playwright
+- Automação de testes de API
 - Page Object Model (POM)
 - Execução via Docker
 - Captura de screenshots em falhas
 - Relatórios com Allure
-- Estrutura pronta para CI/CD
+- Estrutura preparada para CI/CD
 
 ---
 
-## 🐳 Execução via Docker
+# 🐳 Execução via Docker
 
-### Build da imagem:
+## 🔨 Build da imagem
 
 ```bash
 docker build -t qa-framework .
 ```
-### Execução:
+
+## ▶ Execução dos testes
 
 ```bash
 docker run qa-framework
@@ -66,36 +71,34 @@ docker run qa-framework
 
 ---
 
-## 📊 Relatórios (Allure)
+# 📊 Relatórios (Allure)
 
-Após execução dos testes:
-
+Após a execução dos testes:
 ```bash
 allure serve allure-results
 ```
 
-O relatório fornece:
+### O relatório inclui:
 
-Status dos testes
-Logs de execução
-Evidências (screenshots quando aplicável)
-
----
-
-## ⚙️ CI/CD
-
-O projeto possui integração com GitHub Actions para execução automática dos testes em cada push.
+- Status dos testes
+- Logs de execução
+- Evidências (screenshots quando aplicável)
 
 ---
 
-## 💡 O que este projeto demonstra
+# ⚙️ CI/CD
 
-### Este framework demonstra capacidade de:
+Este projeto possui integração com GitHub Actions para execução automática dos testes em cada push.
 
-- Construir automação estruturada
+---
+
+# 💡 O que este projeto demonstra
+
+Este framework demonstra capacidade de:
+- Construir automação estruturada e escalável
 - Aplicar boas práticas de engenharia de testes
 - Trabalhar com containers (Docker)
-- Integrar execução em pipeline CI/CD
-- Organizar código de forma escalável
+- Integrar testes em pipeline CI/CD
+- Organizar código de forma profissional e modular
 
 ---
