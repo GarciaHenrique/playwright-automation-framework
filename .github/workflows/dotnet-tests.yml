@@ -1,0 +1,49 @@
+name: QA Automation Tests (.NET + Playwright)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixar código
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Instalar .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # 3. Restaurar dependências
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # 4. Build do projeto
+      - name: Build project
+        run: dotnet build --no-restore
+
+      # 5. Instalar browsers do Playwright
+      - name: Install Playwright browsers
+        run: pwsh bin/Debug/net8.0/playwright.ps1 install
+
+      # 6. Rodar testes
+      - name: Run tests
+        run: dotnet test --logger "trx"
+
+      # 7. Upload resultados (ARTIFACTS)
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            TestResults/
+            bin/
+            **/allure-results/
