@@ -90,9 +90,6 @@ docker run --rm framework-qa
 
 ---
 
-## 📍 1.8 — RELATÓRIOS ALLURE
-
-```md id="pt8"
 ## 📊 Relatórios de Teste (Allure)
 
 Após a execução dos testes:
