@@ -1,119 +1,101 @@
-# Framework de Automação de Testes QA (.NET + Playwright)
+# QA Automation Framework (.NET + Playwright)
 
-Este projeto é um framework de automação de testes construído com foco em **qualidade, escalabilidade e simulação de um ambiente real de engenharia de software**.
+Framework de automação de testes UI e API construído com Playwright e .NET 8.
 
-Ele foi desenvolvido para representar uma arquitetura utilizada em times de QA Automation em empresas modernas.
+O projeto simula uma arquitetura de automação utilizada em ambientes reais de engenharia de qualidade, com foco em organização, escalabilidade e execução independente de ambiente.
 
 ---
 
 ## 🎯 Objetivo
 
-Demonstrar a construção de um framework de automação de testes com padrões profissionais, cobrindo:
+Este framework foi desenvolvido para demonstrar:
 
 - Automação de testes UI e API
-- Estrutura escalável de projeto
+- Estrutura baseada em Page Object Model
+- Organização de código escalável
+- Execução independente via Docker
 - Integração com CI/CD
-- Execução via containers
 - Geração de relatórios automatizados
 
 ---
 
-## 🧰 Tecnologias utilizadas
+## 🏗 Arquitetura do Framework
 
-- Playwright
-- .NET 8
-- NUnit
-- Docker
-- GitHub Actions
-- Allure Reports
-- RestSharp
-- Bogus (geração de massa de dados)
+O framework segue uma estrutura baseada em camadas:
 
----
+- **Tests** → Casos de teste
+- **Pages** → Page Object Model (UI abstração)
+- **Core** → BaseTest e configuração do ciclo de execução
+- **Utils** → Helpers como screenshots e utilitários
 
-## 🏗 Arquitetura
+### Fluxo de execução:
 
-O framework foi estruturado com base em boas práticas de automação utilizadas em ambientes corporativos:
-
-- Page Object Model (POM)
-- BasePage para abstração de ações comuns
-- BaseTest para gerenciamento de setup e teardown
-- Separação entre testes de UI e API
-- Utilitários para screenshots, logs e helpers
-- Estrutura preparada para escala e manutenção
+1. O teste é iniciado dentro do NUnit
+2. BaseTest inicializa o browser com Playwright
+3. Pages encapsulam ações da interface
+4. Utils capturam evidências (screenshots/logs)
+5. Allure registra os resultados da execução
+6. O browser é encerrado ao final do teste
 
 ---
 
 ## 🚀 Funcionalidades
 
-✔ Testes automatizados de UI com Playwright  
-✔ Testes automatizados de API  
-✔ Estrutura baseada em Page Object Model  
-✔ Execução paralela de testes  
-✔ Captura de screenshots em falhas  
-✔ Gravação de vídeos de execução  
-✔ Execução via Docker  
-✔ Pipeline CI/CD com GitHub Actions  
-✔ Relatórios detalhados com Allure
-
----
-
-## ▶️ Como executar os testes
-
-Execute todos os testes:
-
-```bash
-dotnet test
-```
-
+- Testes automatizados de UI com Playwright
+- Testes de API
+- Page Object Model (POM)
+- Execução via Docker
+- Captura de screenshots em falhas
+- Relatórios com Allure
+- Estrutura pronta para CI/CD
 
 ---
 
 ## 🐳 Execução via Docker
 
-### Construir imagem
+### Build da imagem:
 
 ```bash
-docker build -t framework-qa .
+docker build -t qa-framework .
 ```
-
----
-
-### Executar container
+### Execução:
 
 ```bash
-docker run --rm framework-qa
+docker run qa-framework
 ```
-
----
-
-
----
-
-## 📊 Relatórios de Teste (Allure)
-
-Após a execução dos testes:
-
-```bash
-allure serve allure-results
-```
-
----
-
-## 💡 O que este projeto demonstra
-
-Este framework representa uma implementação realista de automação de testes utilizada em ambientes corporativos, demonstrando:
-
-- Capacidade de estruturar frameworks escaláveis
-- Conhecimento em automação de testes UI e API
-- Boas práticas de engenharia de software aplicada a QA
-- Uso de Docker para padronização de execução
-- Integração com pipelines CI/CD
 
 ---
 
 ## 📊 Relatórios (Allure)
 
-O framework gera relatórios detalhados com histórico de execução:
+Após execução dos testes:
 
-![Allure Report](docs/allure-report.png)
+```bash
+allure serve allure-results
+```
+
+O relatório fornece:
+
+Status dos testes
+Logs de execução
+Evidências (screenshots quando aplicável)
+
+---
+
+## ⚙️ CI/CD
+
+O projeto possui integração com GitHub Actions para execução automática dos testes em cada push.
+
+---
+
+## 💡 O que este projeto demonstra
+
+### Este framework demonstra capacidade de:
+
+- Construir automação estruturada
+- Aplicar boas práticas de engenharia de testes
+- Trabalhar com containers (Docker)
+- Integrar execução em pipeline CI/CD
+- Organizar código de forma escalável
+
+---
