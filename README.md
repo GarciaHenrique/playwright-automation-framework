@@ -1,20 +1,19 @@
 # Framework de Automação de Testes QA (.NET + Playwright)
 
-Este projeto é um framework de automação de testes de UI e API construído com Playwright e .NET 8.
+Este projeto é um framework de automação de testes construído com foco em **qualidade, escalabilidade e simulação de um ambiente real de engenharia de software**.
 
-Ele simula uma arquitetura real utilizada em ambientes de produção, com foco em escalabilidade, organização e boas práticas de automação.
+Ele foi desenvolvido para representar uma arquitetura utilizada em times de QA Automation em empresas modernas.
 
 ---
 
 ## 🎯 Objetivo
 
-O objetivo deste projeto é demonstrar habilidades reais de automação de testes, incluindo:
+Demonstrar a construção de um framework de automação de testes com padrões profissionais, cobrindo:
 
-- Testes automatizados de UI
-- Testes de API
-- Estrutura escalável de framework
+- Automação de testes UI e API
+- Estrutura escalável de projeto
 - Integração com CI/CD
-- Execução via Docker
+- Execução via containers
 - Geração de relatórios automatizados
 
 ---
@@ -32,29 +31,30 @@ O objetivo deste projeto é demonstrar habilidades reais de automação de teste
 
 ---
 
-## 🏗 Arquitetura do Framework
+## 🏗 Arquitetura
 
-O projeto segue boas práticas de automação de testes:
+O framework foi estruturado com base em boas práticas de automação utilizadas em ambientes corporativos:
 
 - Page Object Model (POM)
-- BasePage para ações reutilizáveis
-- BaseTest para setup e teardown
-- Separação entre testes UI e API
-- Camada de utilitários para helpers (screenshots, logs)
+- BasePage para abstração de ações comuns
+- BaseTest para gerenciamento de setup e teardown
+- Separação entre testes de UI e API
+- Utilitários para screenshots, logs e helpers
+- Estrutura preparada para escala e manutenção
 
 ---
 
 ## 🚀 Funcionalidades
 
-✔ Automação de testes de UI  
-✔ Automação de testes de API  
-✔ Page Object Model (POM)  
+✔ Testes automatizados de UI com Playwright  
+✔ Testes automatizados de API  
+✔ Estrutura baseada em Page Object Model  
 ✔ Execução paralela de testes  
-✔ Screenshots automáticos em falhas  
+✔ Captura de screenshots em falhas  
 ✔ Gravação de vídeos de execução  
 ✔ Execução via Docker  
 ✔ Pipeline CI/CD com GitHub Actions  
-✔ Relatórios com Allure  
+✔ Relatórios detalhados com Allure
 
 ---
 
@@ -102,19 +102,16 @@ allure serve allure-results
 
 ---
 
-## 📍 1.9 — O QUE ESSE PROJETO DEMONSTRA
-
-```md id="pt9"
 ## 💡 O que este projeto demonstra
 
-Este framework simula um ambiente real de automação de testes utilizado em empresas, demonstrando:
+Este framework representa uma implementação realista de automação de testes utilizada em ambientes corporativos, demonstrando:
 
-- Estrutura profissional de automação
-- Conhecimento em boas práticas de QA
-- Integração com CI/CD
-- Uso de Docker para execução isolada
-- Capacidade de construir frameworks escaláveis
-```
+- Capacidade de estruturar frameworks escaláveis
+- Conhecimento em automação de testes UI e API
+- Boas práticas de engenharia de software aplicada a QA
+- Uso de Docker para padronização de execução
+- Integração com pipelines CI/CD
+
 ---
 
 ## 📌 Status do projeto
@@ -136,6 +133,8 @@ Utils/        -> Helpers (screenshot, config, etc)
 TestData/     -> Massa de dados
 ```
 
-## 📊 Evidência de execução (Allure)
+## 📊 Relatórios (Allure)
 
-![Relatório Allure](docs/allure-report.png)
+O framework gera relatórios detalhados com histórico de execução:
+
+![Allure Report](docs/allure-report.png)
