@@ -1,19 +1,34 @@
 # Enterprise QA Automation Framework (.NET + Playwright)
-Automation framework for UI and API testing using Playwright, .NET 8, Page Object Model, Docker and CI/CD pipelines.
 
-✔ Page Object Model architecture  
-✔ API testing (REST)  
-✔ Parallel execution  
-✔ Docker support  
-✔ CI/CD with GitHub Actions  
-✔ Allure reporting  
+Framework de automação de testes UI + API usando Playwright com .NET 8, arquitetura Page Object Model e execução via Docker e CI/CD.
+
+---
+
+## Tech Stack
+
+- Playwright
+- .NET 8
+- NUnit
+- Docker
+- GitHub Actions
+- Allure Reports
+
+---
+
+## Features
+
+✔ UI Testing (Playwright)  
+✔ API Testing  
+✔ Page Object Model (POM)  
 ✔ Screenshots on failure  
 ✔ Video recording  
-✔ Test data management (JSON + Faker)
+✔ Parallel execution  
+✔ Docker support  
+✔ CI/CD pipeline (GitHub Actions)
 
+---
+
+## How to run tests
+
+```bash
 dotnet test
-
-docker build -t framework .
-docker run framework
-
-
