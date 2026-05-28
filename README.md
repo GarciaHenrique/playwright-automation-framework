@@ -1,17 +1,21 @@
-# Enterprise QA Automation Framework (.NET + Playwright)
+# Framework de Automação de Testes QA (.NET + Playwright)
 
-Este projeto é um framework de automação de testes **UI e API** construído com **Playwright + .NET 8**, utilizando boas práticas de mercado como Page Object Model, execução paralela, Docker e CI/CD.
+Este projeto é um framework de automação de testes de UI e API construído com Playwright e .NET 8.
+
+Ele simula uma arquitetura real utilizada em ambientes de produção, com foco em escalabilidade, organização e boas práticas de automação.
 
 ---
 
-## 📌 Objetivo
+## 🎯 Objetivo
 
-Fornecer uma estrutura escalável e reutilizável para automação de testes, simulando um ambiente real de empresa, com suporte a:
+O objetivo deste projeto é demonstrar habilidades reais de automação de testes, incluindo:
 
-- Testes de UI
+- Testes automatizados de UI
 - Testes de API
-- Execução em containers
-- Integração contínua
+- Estrutura escalável de framework
+- Integração com CI/CD
+- Execução via Docker
+- Geração de relatórios automatizados
 
 ---
 
@@ -24,24 +28,103 @@ Fornecer uma estrutura escalável e reutilizável para automação de testes, si
 - GitHub Actions
 - Allure Reports
 - RestSharp
-- Bogus (test data generation)
+- Bogus (geração de massa de dados)
+
+---
+
+## 🏗 Arquitetura do Framework
+
+O projeto segue boas práticas de automação de testes:
+
+- Page Object Model (POM)
+- BasePage para ações reutilizáveis
+- BaseTest para setup e teardown
+- Separação entre testes UI e API
+- Camada de utilitários para helpers (screenshots, logs)
 
 ---
 
 ## 🚀 Funcionalidades
 
+✔ Automação de testes de UI  
+✔ Automação de testes de API  
 ✔ Page Object Model (POM)  
-✔ Testes UI automatizados  
-✔ Testes de API REST  
 ✔ Execução paralela de testes  
-✔ Screenshots em falhas  
-✔ Gravação de vídeos  
-✔ Configuração de ambientes  
+✔ Screenshots automáticos em falhas  
+✔ Gravação de vídeos de execução  
 ✔ Execução via Docker  
-✔ CI/CD com GitHub Actions  
+✔ Pipeline CI/CD com GitHub Actions  
 ✔ Relatórios com Allure  
 
 ---
+
+## ▶️ Como executar os testes
+
+Execute todos os testes:
+
+```bash
+dotnet test
+```
+
+
+---
+
+## 📍 1.7 — DOCKER
+
+```md id="pt7"
+## 🐳 Execução via Docker
+
+### Construir imagem
+
+```bash
+docker build -t framework-qa .
+```
+
+---
+
+docker run framework-qa
+
+---
+
+
+---
+
+## 📍 1.8 — RELATÓRIOS ALLURE
+
+```md id="pt8"
+## 📊 Relatórios de Teste (Allure)
+
+Após a execução dos testes:
+
+```bash
+allure serve allure-results
+```
+
+---
+
+## 📍 1.9 — O QUE ESSE PROJETO DEMONSTRA
+
+```md id="pt9"
+## 💡 O que este projeto demonstra
+
+Este framework simula um ambiente real de automação de testes utilizado em empresas, demonstrando:
+
+- Estrutura profissional de automação
+- Conhecimento em boas práticas de QA
+- Integração com CI/CD
+- Uso de Docker para execução isolada
+- Capacidade de construir frameworks escaláveis
+```
+---
+
+## 📌 Status do projeto
+
+✔ Projeto funcional  
+✔ Estrutura organizada  
+✔ Pronto para uso em portfólio  
+✔ Simula ambiente real de automação de testes  
+
+
 
 ## 📂 Estrutura do projeto
 
@@ -51,3 +134,8 @@ Pages/        -> Page Objects (POM)
 Tests/        -> Test cases
 Utils/        -> Helpers (screenshot, config, etc)
 TestData/     -> Massa de dados
+```
+
+## 📊 Evidência de execução (Allure)
+
+![Relatório Allure](docs/allure-report.png)
