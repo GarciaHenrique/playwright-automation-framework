@@ -69,9 +69,6 @@ dotnet test
 
 ---
 
-## 📍 1.7 — DOCKER
-
-```md id="pt7"
 ## 🐳 Execução via Docker
 
 ### Construir imagem
@@ -82,7 +79,11 @@ docker build -t framework-qa .
 
 ---
 
-docker run framework-qa
+### Executar container
+
+```bash
+docker run --rm framework-qa
+```
 
 ---
 
