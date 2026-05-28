@@ -1,0 +1,6 @@
+bin/
+obj/
+allure-results/
+Screenshots/
+Videos/
+TestResults/
