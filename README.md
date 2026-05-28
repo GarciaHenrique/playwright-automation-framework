@@ -112,25 +112,6 @@ Este framework representa uma implementação realista de automação de testes 
 
 ---
 
-## 📌 Status do projeto
-
-✔ Projeto funcional  
-✔ Estrutura organizada  
-✔ Pronto para uso em portfólio  
-✔ Simula ambiente real de automação de testes  
-
-
-
-## 📂 Estrutura do projeto
-
-```text
-Core/         -> Base classes (BaseTest, drivers)
-Pages/        -> Page Objects (POM)
-Tests/        -> Test cases
-Utils/        -> Helpers (screenshot, config, etc)
-TestData/     -> Massa de dados
-```
-
 ## 📊 Relatórios (Allure)
 
 O framework gera relatórios detalhados com histórico de execução:
