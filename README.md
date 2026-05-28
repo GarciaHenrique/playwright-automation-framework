@@ -122,7 +122,7 @@ allure serve allure-results
 
 ---
 
-# ⚙️ CI/CD (GitHub Actions)
+## ⚙️ CI/CD (GitHub Actions)
 
 O projeto possui pipeline automatizado que executa:
 - Build do projeto
@@ -136,7 +136,7 @@ Execução automática ocorre em:
 
 ---
 
-📸 Evidências de Teste
+## 📸 Evidências de Teste
 
 O framework gera automaticamente:
 - Screenshots em falhas
@@ -145,7 +145,7 @@ O framework gera automaticamente:
 
 ---
 
-# 🧪 Exemplo de Teste
+## 🧪 Exemplo de Teste
 ```C#
 [Test]
 public async Task Login_ShouldBeSuccessful()
