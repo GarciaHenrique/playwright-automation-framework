@@ -9,7 +9,7 @@ public class BaseTest
     protected IPlaywright? Playwright;
     protected IBrowser? Browser;
     protected IBrowserContext? Context;
-    protected IPage? Page;
+    protected IPage Page = null!;
 
     [SetUp]
     public async Task Setup()

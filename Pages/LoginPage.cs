@@ -4,36 +4,28 @@ namespace PlaywrightFramework.Pages;
 
 public class LoginPage : BasePage
 {
-    private readonly IPage _page;
-
-    public LoginPage(IPage page)
-    : base(page)
+    public LoginPage(IPage page) : base(page)
     {
-        _page = page;
     }
 
     // Locators
     private ILocator UsernameInput =>
-        _page.Locator("#user-name");
+        Page.Locator("#user-name");
 
     private ILocator PasswordInput =>
-        _page.Locator("#password");
+        Page.Locator("#password");
 
     private ILocator LoginButton =>
-        _page.Locator("#login-button");
+        Page.Locator("#login-button");
 
     private ILocator ErrorMessage =>
-        _page.Locator("[data-test='error']");
+        Page.Locator("[data-test='error']");
 
     // Actions
-    public async Task Login(
-        string username,
-        string password)
+    public async Task Login(string username, string password)
     {
         await Fill(UsernameInput, username);
-
         await Fill(PasswordInput, password);
-
         await Click(LoginButton);
     }
 
