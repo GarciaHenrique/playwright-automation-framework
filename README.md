@@ -56,7 +56,7 @@ Ele permite:
 
 ---
 
-# ▶️ Como executar localmente
+## ▶️ Como executar localmente
 
 ### 1. Pré-requisitos
 - .NET 8 SDK
@@ -94,7 +94,7 @@ dotnet test
 
 ---
 
-# 🐳 Execução com Docker
+## 🐳 Execução com Docker
 
 ### Build da imagem
 ```bash
